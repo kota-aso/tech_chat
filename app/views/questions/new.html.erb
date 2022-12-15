@@ -1,0 +1,16 @@
+<%= form_with(model: @question, local: true) do |form|%>
+  <div class="question-form">
+    <div class="form-title">
+      <%= form.text_field :title, placeholder: "タイトル" %>
+    </div>
+    <div class="form-content">
+      <%= form.text_area :content, placeholder: "質問内容" %>
+    </div>
+    <div class="form-name">
+      <%= form.text_field :name, placeholder: "投稿者名" %>
+    </div>
+    <div class="submit-btn">
+      <%= form.submit "POST"%>
+    </div>
+  </div>
+<% end %>
